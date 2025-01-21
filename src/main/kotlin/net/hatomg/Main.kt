@@ -6,7 +6,7 @@ import kotlin.system.exitProcess
 
 fun main(args: Array<String>) {
     if (args.isEmpty()) {
-        println("使用方法: backup_management.jar <ディレクトリ名>")
+        println("使用方法: backup_management-all.jar <ディレクトリ名>")
         exitProcess(1)
     }
 
