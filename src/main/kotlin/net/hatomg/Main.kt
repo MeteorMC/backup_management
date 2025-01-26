@@ -21,7 +21,7 @@ fun main(args: Array<String>) {
     val currentExe = File(Main::class.java.protectionDomain.codeSource.location.toURI()).toPath().toAbsolutePath().normalize().toFile()
 
     val oldFile = dir.listFiles()
-        ?.filter { it.isFile && it != currentExe }
+        ?.filter { it.isFile && it.canonicalPath != currentExe.canonicalPath  }
         ?.minByOrNull { it.lastModified() }
 
     if (oldFile != null) {
