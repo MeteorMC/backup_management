@@ -18,7 +18,7 @@ fun main(args: Array<String>) {
         exitProcess(1)
     }
 
-    val currentExe = Paths.get(".").toAbsolutePath().normalize().toFile()
+    val currentExe = File(Main::class.java.protectionDomain.codeSource.location.toURI()).toPath().toAbsolutePath().normalize().toFile()
 
     val oldFile = dir.listFiles()
         ?.filter { it.isFile && it != currentExe }
