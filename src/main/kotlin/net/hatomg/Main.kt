@@ -4,6 +4,8 @@ import java.io.File
 import java.nio.file.Paths
 import kotlin.system.exitProcess
 
+class Main
+
 fun main(args: Array<String>) {
     if (args.isEmpty()) {
         println("使用方法: backup_management-all.jar <ディレクトリ名>")
